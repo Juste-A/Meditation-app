@@ -43,7 +43,7 @@
     position: fixed;
     top: 0%;
     left: 0%;
-    width: 100%;
+    width: 100vw;
     z-index: -1;
 }
 
@@ -74,20 +74,40 @@
 
 .sound button {
     border: none;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin: 10px;
 }
 
 .sound button:nth-child(1) {
-    background-color: rgb(63, 95, 107);
+    background-color: rgba(63, 95, 107, 1);
+}
+
+.sound button:nth-child(1):hover {
+    background-color: rgba(63, 95, 107, 0.7);
 }
 
 .sound button:nth-child(2) {
-    background-color: rgb(216, 216, 94);
+    background-color: rgba(216, 216, 94, 1);
+}
+
+.sound button:nth-child(2):hover {
+    background-color: rgba(216, 216, 94, 0.7);
 }
 
 .sound button:nth-child(3) {
-    background-color: rgb(107, 107, 107);
+    background-color: rgba(107, 107, 107, 1);
+}
+
+.sound button:nth-child(3):hover {
+    background-color: rgba(107, 107, 107, 0.7);
+}
+
+.moving-outline {
+    filter: invert(34%) sepia(40%) saturate(395%) hue-rotate(150deg) brightness(89%) contrast(85%);
+}
+
+.sound button img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(27deg) brightness(105%) contrast(103%);
 }
