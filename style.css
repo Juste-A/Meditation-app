@@ -31,7 +31,7 @@
     height: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(-90deg);
     pointer-events: none;
 }
 
@@ -81,27 +81,27 @@
 }
 
 .sound button:nth-child(1) {
-    background-color: rgba(63, 95, 107, 1);
+    background-color: rgba(63, 95, 107, 0.6);
 }
 
 .sound button:nth-child(1):hover {
-    background-color: rgba(63, 95, 107, 0.7);
+    background-color: rgba(63, 95, 107, 1);
 }
 
 .sound button:nth-child(2) {
-    background-color: rgba(216, 216, 94, 1);
+    background-color: rgba(216, 216, 94, 0.6);
 }
 
 .sound button:nth-child(2):hover {
-    background-color: rgba(216, 216, 94, 0.7);
+    background-color: rgba(216, 216, 94, 1);
 }
 
 .sound button:nth-child(3) {
-    background-color: rgba(107, 107, 107, 1);
+    background-color: rgba(107, 107, 107, 0.6);
 }
 
 .sound button:nth-child(3):hover {
-    background-color: rgba(107, 107, 107, 0.7);
+    background-color: rgba(107, 107, 107, 1);
 }
 
 .moving-outline {
