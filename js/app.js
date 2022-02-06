@@ -1,4 +1,3 @@
-const start = document.querySelector(".start");
 const timeDisplay = document.querySelector('.remaining-time');
 
 // Select audio and video
@@ -10,11 +9,16 @@ const circleProgress = document.querySelector(".circle-progress");
 const numberOfBreaths = document.querySelector(".data-breaths")
 const instructions = document.querySelector(".instructions");
 
+// All buttons
+const start = document.querySelector(".start");
+const buttons = document.querySelectorAll(".all-buttons");
+
+
 let breathsLeft = 10;
 
 // Begin button (start playing video and sound)
 start.addEventListener('click', () => {
-    start.setAttribute("id", "button-inactive");
+    start.classList.add("button-inactive");
     instructions.innerText = "Get relaxed and ready to start breathing";
     setTimeout(() => {
         instructions.innerText = "Breathing is about to begin...";

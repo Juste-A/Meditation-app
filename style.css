@@ -178,6 +178,12 @@
     background-color: rgba(65, 123, 90, 1);
 }
 
+/* disable start button when active */
+.button-inactive {
+    pointer-events: none;
+    background-color: #f1f1f1 !important;
+}
+
 /* Toggle menu */
 .toggle-menu {
     display: none;
@@ -307,10 +313,6 @@
     .rotate {
         transform: rotate(180deg);
     }
-
-    /* .toggle-menu:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-    } */
 
     .toggle-menu img {
         width: 30px;
