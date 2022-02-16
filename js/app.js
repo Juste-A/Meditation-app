@@ -9,16 +9,14 @@ const circleProgress = document.querySelector(".circle-progress");
 const numberOfBreaths = document.querySelector(".data-breaths")
 const instructions = document.querySelector(".instructions");
 
-// All buttons
 const start = document.querySelector(".start");
-const buttons = document.querySelectorAll(".all-buttons");
 
 
 let breathsLeft = 10;
 
 // Begin button (start playing video and sound)
 start.addEventListener('click', () => {
-    start.classList.add("button-inactive");
+    addClass();
     instructions.innerText = "Get relaxed and ready to start breathing";
     setTimeout(() => {
         instructions.innerText = "Breathing is about to begin...";
@@ -102,6 +100,7 @@ const breathingApp = () => {
         if (breathsLeft === 0) {
             clearInterval(breathAnimation);
             instructions.innerText = "Breathing session completed. Click 'Begin' to start another session!"
+            removeClass();
             return;
         }
         growCircle();
@@ -120,4 +119,20 @@ const breathTextUpdate = () => {
             instructions.innerText = "Exhale slowly";
         }, 4000)
     }, 4000)
+}
+
+// function to deactivate buttons when playing
+const buttons = document.querySelectorAll(".all-buttons");
+
+function addClass() {
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.add("button-inactive");
+    }
+}
+
+// function to reset buttons after finished playing
+function removeClass() {
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("button-inactive");
+    }
 }
